@@ -6,14 +6,14 @@ final class Env extends AbstractConfig
 {
     private static array $envData = [];
 
-    public function load(string $envFileName = '.env'): self
+    public function load(string $name = '.env'): static
     {
-        $file = $this->getPath() . DIRECTORY_SEPARATOR . $envFileName;
+        $file = $this->getPath() . DIRECTORY_SEPARATOR . $name;
         $this->parse($file);
 
         if (self::$envData) {
-            foreach (self::$envData as $name => $value) {
-                putenv($name . '=' . $value);
+            foreach (self::$envData as $k => $value) {
+                putenv($k . '=' . $value);
             }
         }
 
@@ -56,9 +56,9 @@ final class Env extends AbstractConfig
         self::$envData[$name] = $value;
     }
 
-    public function get(string $varName, string|bool|null $default = null): string|bool|null
+    public function get(string $name, bool|null $default = null): string|bool|null
     {
-        if ($var = getenv($varName)) {
+        if ($var = getenv($name)) {
             return $var;
         }
 

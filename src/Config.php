@@ -38,7 +38,7 @@ final class Config extends AbstractConfig
     /**
      * @throws ConfigException
      */
-    public function load(string $name): self
+    public function load(string $name = ''): static
     {
         $file = $this->getFilePath($name);
 

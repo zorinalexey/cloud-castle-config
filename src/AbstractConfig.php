@@ -19,4 +19,8 @@ abstract class AbstractConfig extends Singleton
     {
         return $this->path;
     }
+
+    abstract public function load(string $name = ''):static;
+
+    abstract public function get(string $name, bool|null $default = null): mixed;
 }
