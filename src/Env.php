@@ -65,5 +65,3 @@ final class Env extends AbstractConfig
         return $default;
     }
 }
-
-include_once 'helpers.php';

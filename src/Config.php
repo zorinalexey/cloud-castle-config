@@ -49,5 +49,3 @@ final class Config extends AbstractConfig
         return $this;
     }
 }
-
-include_once 'helpers.php';
