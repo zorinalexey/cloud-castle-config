@@ -1,0 +1,23 @@
+{
+  "name": "cloud-castle/config",
+  "description": "Библиотека для установки переменных окружения и конфиг файлов.",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "CloudCastle\\Config\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Зорин Алексей",
+      "email": "zorinalexey59292@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": "^8",
+    "ext-fileinfo": "*",
+    "cloud-castle/abstract-classes": "^1"
+  }
+}
